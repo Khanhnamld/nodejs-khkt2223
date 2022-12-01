@@ -37,6 +37,7 @@ let minutes = date_ob.getMinutes();
 let seconds = date_ob.getSeconds();
 
 let date_time = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
+console.log(date_time);
 
 io.on('connection', (socket) => {
     console.log('user connected') 

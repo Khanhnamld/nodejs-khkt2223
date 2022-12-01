@@ -14,7 +14,7 @@ exports.create = (req,res)=>{
         tuoi : req.body.tuoi,
         gioitinh: req.body.gioitinh,
         chandoan : req.body.chandoan,
-        mucdo: req.body.mucdo,
+        thoigian: req.body.thoigian,
         ketqua: req.body.ketqua
     })
     // console.log(user);
