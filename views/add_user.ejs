@@ -31,9 +31,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% for(var i = 0; i < users.length; i++) { %>
+                        <% for(var i = users.length - 1; i >= 0; i--) { %>
                             <tr>
-                                <td><%= i + 1 %></td>
+                                <td><%= users.length - i %></td>
                                 <td><%= users[i].ten %></td>
                                 <td><%= users[i].tuoi %></td>        
                                 <td><%= users[i].gioitinh %></td>

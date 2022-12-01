@@ -10,6 +10,9 @@
     <!-- ===== ===== Custom Css ===== ===== -->
     <link rel="stylesheet" href="/css/style2.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
 
     <!-- ===== ===== Remix Font Icons Cdn ===== ===== -->
     <link rel="stylesheet" href="fonts/remixicon.css">
@@ -29,9 +32,12 @@
             </div>
         </header> -->
 
-
+        <a href="/">
+            <i class="fas fa-home-lg-alt fa-3x"></i>
+        </a>
         <!-- ===== ===== User Main-Profile ===== ===== -->
         <section class="userProfile card">
+            
             <div class="profile">
                 <img src="img/profile.png" alt="profile" width="200px" height="200px">
             </div>
@@ -92,8 +98,39 @@
                             <% } %>
                  <!-- </li> -->
                 </ul>
+                <div class="progress">
+                    <div class="progress card">
+                        <div class="info">
+                            <div class="name">Câu hỏi ghi nhớ</div>
+                            <div class="detail">3 câu / 5 câu</div>
+                        </div>
+                        <div class="Loading memo"><span></span></div>
+                    </div>
+                    <div class="progress card">
+                        <div class="info">
+                            <div class="name">Câu hỏi toán</div>
+                            <div class="detail">3 câu / 3 câu</div>
+                        </div>
+                        <div class="Loading math"><span></span></div>
+                    </div>
+                    <div class="progress card">
+                        <div class="info">
+                            <div class="name">Câu hỏi đọc</div>
+                            <div class="detail">2 câu / 5 câu</div>
+                        </div>
+                        <div class="Loading read"><span></span></div>
+                    </div>
+                    <div class="progress card">
+                        <div class="info">
+                            <div class="name">Câu hỏi khác</div>
+                            <div class="detail">7 câu / 10 câu</div>
+                        </div>
+                        <div class="Loading others"><span></span></div>
+                    </div>
+                </div>
             </div>
         </section>
+        
     </div>
 
 </body>

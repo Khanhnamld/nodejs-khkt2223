@@ -426,7 +426,7 @@ header {
   right: 0;
   width: 100%;
   height: 0.1rem;
-  background: var(--bg7-color);
+  background: var(--bg6-color);
 }
 
 .timeline_about .tabs ul li {
@@ -567,6 +567,141 @@ header {
   gap: 10rem;
   grid-template-columns: repeat(auto-fit, 200px);
   grid-auto-rows: 100px;
+}
+
+.progress {
+  width: 90%;
+  height: 60%;
+  max-width: 1240px;
+  margin-left: 2rem;
+  
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2.5rem;
+  grid-column-gap: 2rem;
+}
+
+.progress .card {
+  width: 90%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(3rem);
+  box-shadow: 0 0 5px rgba(115, 111, 111, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  /* margin:0.2rem; */
+  /* margin-top: 2rem; */
+  padding: var(--p-1-5);
+}
+
+.progress .card .info .name{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.progress .card .info .detail{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.progress.card .Loading {
+  position: absolute;
+  /* display: inline-block; */
+  bottom: 0;
+  width: 95%;
+  height: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.progress.card .Loading span{
+  height: 100%;
+  position: absolute;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.progress .card .Loading.memo span{
+  background: #a28089;
+  width: 60%;
+}
+.progress .card .Loading.math span{
+  background: #a0d2eb;
+  width: 100%;
+}
+.progress .card .Loading.read span{
+  background: #ffa8b6;
+  width: 40%;
+}
+.progress .card .Loading.others span{
+  background: #d0bdf4;
+  width: 70%;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+@keyframes load {
+  0% {
+    width: 0;
+    background: #a28089;
+  }
+  
+  25% {
+    width: 40%;
+    background: #a0d2eb;
+  }
+  
+  50% {
+    width: 60%;
+    background: #ffa8b6;
+  }
+  
+  75% {
+    width: 75%;
+    background: #d0bdf4;
+  }
+  
+  100% {
+    width: 100%;
+    background: #494d5f;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background: #a28089;
+  }
+  
+  25% {
+    background: #a0d2eb;
+  }
+  
+  50% {
+    background: #ffa8b6;
+  }
+  
+  75% {
+    background: #d0bdf4;
+  }
+  
+  100% {
+    background: #494d5f;
+  }
 }
 
 
