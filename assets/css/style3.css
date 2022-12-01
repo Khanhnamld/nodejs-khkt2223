@@ -10,7 +10,7 @@
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
     width: 100%;
-    padding: 0 20px;
+    padding: 0 30px;
     height: 60px;
     display: grid;
     grid-template-columns: 2fr 10fr 0.4fr 1fr;
@@ -455,7 +455,7 @@ img {
 .work_skills .work .heading,
 .work_skills .skills .heading {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: rgba(60, 31, 31, 0.6);
   text-transform: uppercase;
   margin-bottom: 25px;
@@ -479,7 +479,7 @@ img {
 
 .work_skills .work .primary h1,
 .work_skills .work .secondary h1 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: light;
   color: var(--f3-color);
   margin-bottom: var(--m-0-6);
@@ -553,7 +553,7 @@ img {
 
 #thongtin .userDetails .userName .heading {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: rgba(60, 31, 31, 0.6);  
   text-transform: uppercase;
   margin-bottom: 25px;
@@ -575,7 +575,7 @@ img {
 }
 
 .userDetails .userName h1 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
@@ -680,7 +680,7 @@ img {
   display: flex;
   align-items: center;
   /* margin-bottom: 10px; */
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   width: 100%;
 }
 
@@ -704,13 +704,13 @@ img {
 }
 
 .timeline_about .tabs ul li span {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold; 
+  /* text-transform: uppercase; */ 
   
   color: rgba(60, 31, 31, 0.6);
   
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .timeline_about .tabs ul li .ri {
@@ -755,7 +755,7 @@ img {
 }
 
 .timeline_about .contact_info .ul #label{
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .timeline_about .contact_info ul li,
@@ -767,12 +767,12 @@ img {
 .timeline_about .contact_info ul h1,
 .timeline_about .basic_info ul h1 {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   min-width: 12rem;
 }
 
 .timeline_about .contact_info .heading .phone .label {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .timeline_about .contact_info ul li span,
@@ -787,7 +787,7 @@ img {
 }
 
 .timeline_about .label{
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .grid_res .progress_container {
@@ -932,7 +932,7 @@ img {
   text-align: left;
   outline: none;
   font-size: 18px;
-  border-radius: 10px 10px 0px 0px;
+  /* border-radius: 10px 10px 0px 0px; */
   border: 3px solid rgb(82, 151, 255);
   /* border-bottom: none; */
 }

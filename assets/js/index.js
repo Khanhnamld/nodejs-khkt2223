@@ -64,6 +64,7 @@ function openCity(evt, cityName) {
 document.getElementById('default_open').click();
 
 const modal_data = [3, 4, 1, 2, 3, 5, 6];
+const modal_data2 = [52, 43, 60, 72, 81, 70, 90];
 var lineCanvas = document.getElementById('lineChart');
 var ctx = lineCanvas.getContext('2d');
 var myChart = new Chart(ctx, {
@@ -78,25 +79,50 @@ var myChart = new Chart(ctx, {
 
             ],
             borderColor: 'rgb(41, 155, 99)',
+            borderWidth: 1,
+            yAxisID: 'y'
+        },
+        {
+            label: 'Độ chính xác (%)',
+            data: modal_data2,
+            backgroundColor: [
+                'rgba(241, 193, 218, 0.8)'
 
-            borderWidth: 1
-        }]
+            ],
+            borderColor: 'rgb(250, 2, 27)',
+            borderWidth: 1,
+            yAxisID: 'percentage'
+        }
+        ]
     },
     options: {
         // legend: {display: false},
         // responsive: true,
         
         scales: {
-            yAxes: [
+            y: 
                 {
-                    ticks: {
-                        beginAtZero: true,
-                        steps: 1,
-                        stepValue: 5,
-                        max: 10
+                    beginAtZero: true,
+                    type: 'linear',
+                    position: 'left',
+                    steps: 1,
+                    stepValue: 5,
+                    max: 10
+                },
+            percentage: {
+                beginAtZero: true,
+                type: 'linear',
+                position: 'right',
+                grid: {
+                    drawOnChartArea: false
+                },
+                ticks: {
+                    callback: function(value, index, values){
+                        return `${value}%`;
                     }
-                }
-            ],
+                },
+                max: 100
+            }
         }
     }
 });

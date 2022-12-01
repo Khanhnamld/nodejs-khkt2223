@@ -20,7 +20,8 @@
             <div class="search">
                 <!-- <input type="text" name="search" placeholder="search here">
                 <label for="search"><i class="fas fa-search"></i></label> -->
-                <h1>Bảng điều khiển</h1>
+                <h2>HỆ THỐNG SÀNG LỌC VÀ HỖ TRỢ CHỨNG KHÓ ĐỌC</h2>
+                <!-- <h3>Bảng điều khiển</h1> -->
             </div>
             <i class="fas fa-bell"></i>
         </div>
@@ -44,6 +45,7 @@
                         <h2>Nhắn tin</h2>
                     </button>
                 </li>
+                
             </ul>
         </div>
      <div id="thongtin" class="main">
@@ -83,11 +85,11 @@
             <section class="userDetails card">
                 <div class="userName">
                     <!-- <div class="user"> -->
-                        <h1 class="heading">Thông tin cơ bản</h1>
+                        <h1 class="heading">Thông tin cá nhân</h1>
                     <!-- </div> -->
-                    <h1 class="name">Họ và tên: Nguyễn Văn A</h1>
-                    <h1 class="name">Tuổi: 6 tuổi</h1>
-                    <h1 class="name">Giới tính: Nam</h1>
+                    <h1 class="name">Họ và tên: <%=users[id.id].ten%></h1>
+                    <h1 class="name">Tuổi: <%=users[id.id].tuoi%> tuổi</h1>
+                    <h1 class="name">Giới tính: <%=users[id.id].gioitinh%></h1>
                     <h1 class="name">Quê quán: Thành phố Hồ Chí Minh</h1>
                 </div>
     
@@ -100,10 +102,10 @@
                     <ul>
                         <li class="timeline">
                             <!-- <i class="ri-eye-fill ri"></i> -->
-                            <span>Kết quả sàng lọc</span>
+                            <span>KẾT QUẢ SÀNG LỌC</span>
                         </li>
                         <button data-modal-target="#modal">
-                            <i class="fas fa-info-circle fa-2x"></i>
+                            <i class="fas fa-info-circle fa-1x"></i>
                         </button>
                     </ul>
                 </div>
@@ -112,12 +114,10 @@
                     <!-- <h1 class="heading"></h1> -->
                     <ul>
                     <!-- <li class="phone"> -->
-                                <% if (users[id.id].ketqua < 50) { %> 
-                                <h3 class="label">Nguy cơ cao </h3>
-                                <% } else if (users[id.id].ketqua >= 50 && users[id.id].ketqua < 70) {  %> 
-                                <h3 class="label">Nguy cơ trung bình </h3>    
+                                <% if (users[id.id].ketqua >= 32) { %> 
+                                <h4 class="label" style='color: orange;'>Có nguy cơ</h4>
                                 <% } else{ %>
-                                <h3 class="label">Nguy cơ thấp </h3>
+                                <h4 class="label" style='color: green;'>Không có nguy cơ</h4>
                                 <% } %>
                      <!-- </li> -->
     
@@ -211,7 +211,7 @@
     <div id="nhantin" class="main">
         <div class="chat-bar-collapsible">
             <div class="content">
-                <button id="chat-button" type="button" class="collapsible">Nguyễn Văn A
+                <button id="chat-button" type="button" class="collapsible"><%=users[id.id].ten%>
                     <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
                 </button>
                 <div class="full-chat-block">
