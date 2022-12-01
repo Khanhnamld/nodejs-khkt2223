@@ -14,6 +14,30 @@ const {
     Server
 } = require('socket.io');
 const io = new Server(http);
+
+let date_ob = new Date();
+
+// current date
+// adjust 0 before single digit date
+let date = ("0" + date_ob.getDate()).slice(-2);
+
+// current month
+let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+
+// current year
+let year = date_ob.getFullYear();
+
+// current hours
+let hours = date_ob.getHours();
+
+// current minutes
+let minutes = date_ob.getMinutes();
+
+// current seconds
+let seconds = date_ob.getSeconds();
+
+let date_time = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
+
 io.on('connection', (socket) => {
     console.log('user connected') 
     socket.on("join", (data) =>{
@@ -29,25 +53,20 @@ io.on('connection', (socket) => {
     )
     socket.on('res_ans', data => { 
         console.log(data); 
-        if (data < 50) {
-            t1 = "Mắc bệnh";
-            t2 = "Nặng";
-        } else if (data >= 50 && data < 70){
-            t1 = "Mắc bệnh";
-            t2 = "Nhẹ";
-        }
+        if (data < 32) {
+            t1 = "Không có nguy cơ";
+        } 
         else {
-            t1 = "Không mắc bệnh";
-            t2 = "";
+            t1 = "Có nguy cơ";
         }
   
         axios.post(`http://localhost:${PORT}/api/ds_benhnhan/`, 
         {
-            ten: `Nguyễn Trần Duy Bảo`,
+            ten: `Nguyễn Văn A`,
             tuoi: `6`,
             gioitinh: `Nam`,
             chandoan: `${t1}`, 
-            mucdo: `${t2}`,
+            thoigian: `${date_time}`,
             ketqua: `${data}`
         });
     })

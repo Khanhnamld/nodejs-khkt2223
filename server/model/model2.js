@@ -14,7 +14,7 @@ var schema = new mongoose.Schema({
         required: true
     },
     chandoan : String,
-    mucdo: String,
+    thoigian: String,
     ketqua: String
 })
 

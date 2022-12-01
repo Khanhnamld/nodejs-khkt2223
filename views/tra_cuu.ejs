@@ -20,15 +20,14 @@
     <span class="main_bg"></span>
 
 
-    <!-- ===== ===== Main-Container ===== ===== -->
     <div class="container">
 
         <!-- ===== ===== Header/Navbar ===== ===== -->
-        <header>
+        <!-- <header>
             <div class="brandLogo">
                 <span>Hồ sơ Bệnh nhân</span>
             </div>
-        </header>
+        </header> -->
 
 
         <!-- ===== ===== User Main-Profile ===== ===== -->
@@ -56,12 +55,12 @@
         <!-- ===== ===== User Details Sections ===== ===== -->
         <section class="userDetails card">
             <div class="userName">
-                <div class="user">
-                    <h1 class="heading">Thông tin cơ bản</h1>
-                </div>
-                <h1 class="name">Họ và tên: Nguyễn Trần Duy Bảo</h1>
-                <h1 class="name">Tuổi: 6 tuổi</h1>
-                <h1 class="name">Giới tính: Nam</h1>
+                <!-- <div class="user"> -->
+                    <h1 class="heading">Thông tin cá nhân</h1>
+                <!-- </div> -->
+                <h1 class="name">Họ và tên: <%=users[id.id].ten%></h1>
+                <h1 class="name">Tuổi: <%=users[id.id].tuoi%> tuổi</h1>
+                <h1 class="name">Giới tính: <%=users[id.id].gioitinh%></h1>
                 <h1 class="name">Quê quán: Thành phố Hồ Chí Minh</h1>
             </div>
 
@@ -73,52 +72,26 @@
             <div class="tabs">
                 <ul>
                     <li class="timeline">
-                        <i class="ri-eye-fill ri"></i>
-                        <span>Chẩn đoán</span>
+                        <!-- <i class="ri-eye-fill ri"></i> -->
+                        <span>KẾT QUẢ SÀNG LỌC</span>
                     </li>
+                    <!-- <button data-modal-target="#modal">
+                        <i class="fas fa-info-circle fa-1x"></i>
+                    </button> -->
                 </ul>
             </div>
 
             <div class="contact_Info">
-                <h1 class="heading"></h1>
+                <!-- <h1 class="heading"></h1> -->
                 <ul>
-                <li class="phone">
-                            <% if (users[id.id].ketqua < 50) { %> 
-                            <h1 class="label">Kết quả chẩn đoán: Nguy cơ cao </h1>
-                            <% } else if (users[id.id].ketqua >= 50 && users[id.id].ketqua < 70) {  %> 
-                            <h1 class="label">Kết quả chẩn đoán: Nguy cơ trung bình </h1>    
+                <!-- <li class="phone"> -->
+                            <% if (users[id.id].ketqua >= 32) { %> 
+                            <h4 class="label" style='color: orange;'>Có nguy cơ</h4>
                             <% } else{ %>
-                            <h1 class="label">Kết quả chẩn đoán: Nguy cơ thấp </h1>
+                            <h4 class="label" style='color: green;'>Không có nguy cơ</h4>
                             <% } %>
-                 </li>
-
+                 <!-- </li> -->
                 </ul>
-                <!-- <section class = "grid_res">
-                    <div class="progress_container">
-                        <div class="circular-progress">
-                            <span class="progress-value">70%</span>
-                        </div>
-                        <span class="text">abcde</span>
-                    </div>
-                    <div class="progress_container">
-                        <div class="circular-progress">
-                            <span class="progress-value">70%</span>
-                        </div>
-                        <span class="text" >abcde</span>
-                    </div>
-                    <div class="progress_container">
-                        <div class="circular-progress">
-                            <span class="progress-value">70%</span>
-                        </div>
-                        <span class="text">abcde</span>
-                    </div>
-                    <div class="progress_container">
-                        <div class="circular-progress">
-                            <span class="progress-value">70%</span>
-                        </div>
-                        <span class="text">abcde</span>
-                    </div>
-                </section> -->
             </div>
         </section>
     </div>
