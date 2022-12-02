@@ -46,9 +46,9 @@ io.on('connection', (socket) => {
   
         axios.post(`http://localhost:${PORT}/api/ds_benhnhan/`, 
         {
-            ten: `Nguyễn Thị B`,
+            ten: `Nguyễn Đức Nam Bảo`,
             tuoi: `7`,
-            gioitinh: `Nữ`,
+            gioitinh: `Nam`,
             chandoan: `${t1}`, 
             thoigian: `${date_time}`,
             ketqua: `${data}`

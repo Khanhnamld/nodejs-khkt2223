@@ -144,7 +144,7 @@ var myChart2 = new Chart(ctx2, {
 
         datasets: [{
             label: 'Employees',
-            data: [42, 12, 8, 6],
+            data: [5, 10, 6, 12],
             backgroundColor: [
                 'rgba(41, 155, 99, 1)',
                 'rgba(54, 162, 235, 1)',

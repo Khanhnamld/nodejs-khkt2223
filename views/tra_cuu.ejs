@@ -38,9 +38,11 @@
         <!-- ===== ===== User Main-Profile ===== ===== -->
         <section class="userProfile card">
             
-            <div class="profile">
-                <img src="img/profile.png" alt="profile" width="200px" height="200px">
-            </div>
+            <% if (users[id.id].ten == "Nguyễn Lê Hạnh Linh") { %> 
+                <img src="img/profile1.png" alt="profile" width="200px" height="200px">
+                <% } else{ %>
+                <img src="img/profile2.png" alt="profile" width="200px" height="200px">
+            <% } %>
         </section>
 
 
